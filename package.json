@@ -1,0 +1,26 @@
+{
+  "name": "myServer",
+  "version": "0.0.1",
+  "description": "Does stuff for me!",
+  "main": "run.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sel-en-ium/myServer.git"
+  },
+  "author": "Sel-en-ium",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sel-en-ium/myServer/issues"
+  },
+  "homepage": "https://github.com/Sel-en-ium/myServer#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "sel-en-ium-utility": "Sel-en-ium/NodeJsUtility",
+    "sel-en-ium-persistor": "Sel-en-ium/NodeJsPersistor",
+    "express": "~4.13.0",
+    "express-session": "^1.11.3",
+    "fs-extra": "~0.20.1",
+    "path": "~0.11.14"
+  }
+}
