@@ -4,6 +4,7 @@
   'use strict';
 
   var
+    path = require('path'),
     Persistor = require('sel-en-ium-persistor'),
     persitor,
     databaseApi = {};
@@ -11,7 +12,7 @@
   persitor = new Persistor({
     type: 'LocalFile',
     config: {
-      dir: '../../data'
+      filePath: path.join(__dirname, '../../../../data/lovelive.json')
     }
   });
 
@@ -26,7 +27,7 @@
    * Gets all entries.
    */
   databaseApi.getAll = function (callback) {
-    persitor.create(callback);
+    persitor.getAll(callback);
   };
 
   module.exports = databaseApi;

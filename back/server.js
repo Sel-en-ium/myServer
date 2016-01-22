@@ -25,6 +25,7 @@
     /* MIDDLEWARE */
 
     self.app.use(middleware.setBody());
+    self.app.use(middleware.allowCrossDomain());
 
   };
 
