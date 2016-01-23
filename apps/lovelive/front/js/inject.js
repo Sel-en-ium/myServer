@@ -3,7 +3,7 @@
   'use strict';
 
   var
-    MAX_CARD = 15;
+    MAX_CARD = 784;
 
   function sendReq(type, url, body, callback) {
     var xmlhttp = new XMLHttpRequest();
@@ -79,12 +79,12 @@
 
     /* CARD TYPE */
     data.cardType = 'normal';
-    if ($('.card .flaticon-event').length) {
+    if ($('.card .panel-footer .flaticon-event').length) {
       data.cardType = 'event';
-    } else if ($('.card .flaticon-promo').length) {
+    } else if ($('.card .panel-footer .flaticon-promo').length) {
       data.cardType = 'promo';
-    } else if ($('.card .flaticon-skill').length) {
-      data.cardType = 'skill';
+    } else if ($('.card .panel-footer .flaticon-skill').length) {
+      data.cardType = 'special';
     }
 
     /* COLLECTION */
@@ -155,18 +155,15 @@
 
         // Amount
         temp = el.substring(el.search('%') + 1);
-        temp = temp.match(new RegExp(/[0123456789]+(?=\.)|[0123456789]+\s[a-z]*/i))[0].split(' ');
-        data.skill.amount = temp[0];
+        data.skill.amount = temp.match(new RegExp(/[0123456789]+/i))[0];
 
         // Type
-        if (temp.length === 1) {
+        if ($('.card .flaticon-healer').length) {
           data.skill.type = 'heal';
-        } else if (temp[1].toLowerCase() === 'seconds') {
+        } else if ($('.card .flaticon-perfectlock').length) {
           data.skill.type = 'lock';
-        } else if (temp[1].toLowerCase() === 'points') {
+        } else if ($('.card .flaticon-scoreup').length) {
           data.skill.type = 'score';
-        } else {
-          data.skill.type = temp[1];
         }
 
       }
