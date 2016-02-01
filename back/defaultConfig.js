@@ -9,7 +9,8 @@
 
     // The apps to include.  If they have a router, the route will be the index value here.
     apps: {
-      'lovelive': appMap['lovelive']
+      //'lovelive': require(appMap['lovelive']),
+      'conquer': require(appMap['conquer'])
     }
   }
 }());

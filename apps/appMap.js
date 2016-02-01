@@ -2,7 +2,11 @@
 (function () {
   'use strict';
 
+  var
+    path = require('path');
+
   module.exports = {
-    lovelive: require('./lovelive/manifest')
+    lovelive: path.join(__dirname, 'lovelive/manifest'),
+    conquer: path.join(__dirname, 'conquer/manifest')
   }
 }());

@@ -2,3 +2,7 @@
 node_modules
 /plans.txt
 data
+/apps/conquer/resource/creds.csv
+creds.csv
+/apps/conquer/resource/creds.json
+/apps/conquer/resource/creds.xlsx
